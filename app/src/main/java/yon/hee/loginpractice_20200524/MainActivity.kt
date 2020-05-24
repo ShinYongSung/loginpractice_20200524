@@ -20,14 +20,26 @@ class MainActivity : AppCompatActivity() {
             Log.d("입력아이디", inputid)
             Log.d("입력비번", inputPw)
 
-            when (inputid) {
-                "admin" -> {Log.d("입력ID", "관리자")}
-                "admin@admin.com" ->{
-                    Log.d("입력ID", "관리자이메일")
-                }
-                else -> {Log.d(("입력ID","틀린ID"))}
+            if(inputid == "admin@admin.com" && inputPw == "qwer") {
+                Log.d("로그인확인", "관리자입니다.")
             }
+            else{Log.d("로그인확인", "로그인에 실패했습니다".)}
 
+
+
+
+
+
+
+//
+//            when (inputid) {
+//                "admin" -> {Log.d("입력ID", "관리자")}
+//                "admin@admin.com" ->{
+//                    Log.d("입력ID", "관리자이메일")
+//                }
+//                else -> {Log.d(("입력ID","틀린ID"))}
+//            }
+//
 //            if (inputid == "admin") {
 //
 //                //둘이 실제로 같을때만 실행되는 코드
